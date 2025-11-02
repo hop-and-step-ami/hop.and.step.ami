@@ -1,5 +1,4 @@
-# hop.and.step.ami
-[index_Version7.html](https://github.com/user-attachments/files/23290757/index_Version7.html)
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

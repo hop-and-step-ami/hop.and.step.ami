@@ -1,76 +1,551 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
+
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>医療的ケア児・重症心身障がい児専門 児童発達支援 放課後デイサービス ほっぷ＆すてっぷ｜hop.and.step.ami</title>
+  <title>医療的ケア児・重症心身障がい児専門 放課後等デイサービス ほっぷ＆すてっぷ｜hop.and.step.ami</title>
+
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医療的ケア児・重症心身障がい児専門 放課後等デイサービス ほっぷ＆すてっぷ｜hop.and.step.ami</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+    :root{
+      --accent1: #f9c5d1;
+      --accent2: #f8e9a1;
+      --accent3: #a8e6cf;
+      --accent4: #ffd3b6;
+      --main-color: #0096c7;
+      --sub-color: #caf0f8;
+      --text: #2e4a3b;
+    }
+
     body {
       font-family: "Noto Sans JP", sans-serif;
       margin: 0;
       background-color: #fff8fc;
-      color: #444;
+      color: var(--text);
       line-height: 1.8;
     }
+
+    /* 🌈ヘッダー */
     header {
-      background: linear-gradient(90deg, #f9c5d1, #f8e9a1, #a8e6cf, #ffd3b6);
+      background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3), var(--accent4));
       background-size: 400% 400%;
       animation: gradient 10s ease infinite;
       padding: 30px 20px;
       text-align: center;
-      color: #2e4a3b;
-      border-bottom: 5px solid #ffd6a5;
+      color: var(--text);
+      border-bottom: 5px solid var(--accent4);
     }
     @keyframes gradient {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
     }
-    header h1 {font-size: 1.8rem;margin: 0;font-weight: 700;}
+    header img {
+      width: 160px;
+      border-radius: 25px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    header h1 {
+      font-size: 1.9rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+    }
+
+    /* 🌸ナビゲーション */
     nav {
-      display: flex;justify-content: center;flex-wrap: wrap;gap: 15px;
-      padding: 15px;background-color: #ffffff;box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;top: 0;z-index: 100;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      text-decoration: none;color: #2e4a3b;background-color: #a8e6cf;
-      padding: 8px 16px;border-radius: 25px;font-weight: bold;transition: 0.3s;
+      text-decoration: none;
+      color: var(--text);
+      background-color: var(--accent3);
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
     }
-    nav a:hover {background-color: #ffd3b6;color: #fff;}
-    .hero {text-align: center;padding: 50px 20px;background-color: #fdf2e9;}
-    .hero img {width: 90%;max-width: 600px;border-radius: 25px;margin-bottom: 25px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);}
-    section {padding: 40px 20px;max-width: 900px;margin: 40px auto;background-color: #fff;
-      border-radius: 20px;box-shadow: 0 4px 10px rgba(0,0,0,0.05);}
-    h2 {color: #2e4a3b;border-left: 8px solid #f5b76e;padding-left: 10px;margin-bottom: 20px;}
-    h3 {color: #2e4a3b;margin-top: 25px;font-size: 1.2rem;}
+    nav a:hover {
+      background-color: var(--accent4);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* 💖ヒーローセクション */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #fff0f5, #fefae0);
+    }
+    .hero img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+   /* 💠見出し統一スタイル */
+section h2,
+h2 {
+  background: linear-gradient(90deg, #ede4ff, #ffffff); /* 淡い薄紫→白 */
+  color: #9c7be8; /* ラベンダー系の文字色 */
+  border-left: 10px solid #b499ff; /* 少し濃いめの薄紫でアクセント */
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+    /* 💬小見出し */
+    h3 {
+      color: var(--main-color);
+      border-bottom: 2px dotted var(--main-color);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    /* 🍀強調ボックス */
+    .highlight-box {
+      background: var(--sub-color);
+      border-left: 6px solid var(--main-color);
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    /* 🌈ほっぷ＆すてっぷの特徴 */
+    #features {
+      counter-reset: feature;
+      margin-top: 20px;
+    }
+    #features p strong:first-child::before {
+      content: counter(feature, decimal-leading-zero) ". ";
+      counter-increment: feature;
+      color: var(--main-color);
+      font-weight: bold;
+    }
+    #features p strong {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: var(--text);
+      background: none; /* ✅囲みなし */
+    }
+
+    /* 📋ご利用までの流れ */
+    ol.flow-steps {
+      list-style: none;
+      counter-reset: step;
+      padding-left: 0;
+    }
+    ol.flow-steps li {
+      position: relative;
+      padding-left: 35px;
+      margin: 15px 0;
+    }
+    ol.flow-steps li::before {
+      counter-increment: step;
+      content: counter(step) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--main-color);
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+  /* ⏰スケジュール表（超淡いピンクテーマ） */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+table th {
+  background: #fdeaf2; /* ごく淡いピンク */
+  color: #704c5e; /* 落ち着いた赤みグレー文字 */
+  padding: 10px;
+  font-weight: 700;
+}
+table td {
+  border: 1px solid #f8dfe8; /* ほんのりピンクの罫線 */
+  padding: 8px;
+  color: #444;
+}
+table tr:nth-child(even) {
+  background-color: #fff9fb; /* ほぼ白に近い淡ピンク */
+}
+
+ /* 🩺 医療的ケア：番号だけ青色（重複修正版） */
+#medicalcare ol {
+  counter-reset: care-step;
+  list-style: none; /* ← 標準番号を確実に消す */
+  padding-left: 0;
+  margin: 0;
+}
+
+#medicalcare ol li {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px; /* 番号分のスペース */
+  line-height: 1.8;
+}
+
+/* 番号デザイン（青色） */
+#medicalcare ol li::before {
+  counter-increment: care-step;
+  content: counter(care-step) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--main-color); /* 青色 */
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+
+
+    /* 🏠アクセス・お問い合わせ */
+    #access, #contact {
+      background: linear-gradient(180deg, #ffffff, var(--sub-color));
+      padding: 20px;
+      border-radius: 10px;
+      margin: 40px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* 💬リンク */
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: var(--accent1);
+    }
+
+    /* 🌸フッター */
     footer {
-      background-color: #a8e6cf;text-align: center;padding: 20px;
-      font-size: 0.9rem;color: #2e4a3b;margin-top: 50px;border-top: 4px solid #ffd6a5;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      padding: 20px 0;
+      border-top: 2px solid var(--sub-color);
+      background: #fdfdfd;
     }
+
+/* 👩‍⚕️スタッフ紹介カード（青緑で囲む） */
+.staff-card {
+  background: #ffffff;
+  border: 3px solid var(--main-color); /* 青緑の枠線 */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+.staff-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+.staff-card h3 {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.staff-card p {
+  margin: 5px 0;
+}
   </style>
-</head>
-<body>
+
+
+
   <header>
-    <h1>医療的ケア児・重症心身障がい児専門<br>児童発達支援・放課後デイサービス　ほっぷ＆すてっぷ</h1>
-  </header>
-  <nav>
-    <a href="#about">重心児・医療ケア児専門　ほっぷ＆すてっぷとは？</a>
-    <a href="#about_hopstep">🌈ほっぷ＆すてっぷの特徴</a>
-    <a href="#services">１日の流れ</a>
-    <a href="#target">医療的ケアについて</a>
-    <a href="#medicalcare">ご利用できるお子様</a>
-    <a href="#flow">利用手続きについて</a>
-    <a href="#team">スタッフ紹介</a>
+    <!-- ロゴ： /images/logo.jpeg や IMG_9489.jpeg に差し替えてください -->
+    <img src="IMG_9489.jpeg" alt="ほっぷ＆すてっぷ ロゴ" class="logo">
+    <h1>医療的ケア児・重症心身障がい児専門 放課後等デイサービス<br>ほっぷ＆すてっぷ</h1>
+    <p class="lead"><span style="background-color: rgba(0, 0, 0, 0);">医療ケアに長けた専門スタッフがチームを組み、<br>「お子さんとご家族の安心」をサポートします</span></p></header><nav>
+    <a href="#about">🌈ほっぷ＆すてっぷの特徴</a>
+    <a href="#schedule">１日のスケジュール</a>
+    <a href="#medicalcare">医療的ケアについて</a>
+    <a href="#target">ご利用できるお子様</a>
+    <a href="#flow">ご利用までの流れ</a>
+    <a href="#staff">スタッフ紹介</a>
     <a href="#gallery">施設写真</a>
     <a href="#access">アクセス</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
-  <div class="hero">
-    <img src="https://placehold.jp/800x400.png?text=笑顔の子どもたち（仮画像）" alt="笑顔の子どもたち">
-    <h2>どんな重い障がいや医療的ケアがあっても、子どもには子ども同士のつながりがある。<br>お友達と心躍る“ほっぷ”な気持ちで、次の“すてっぷ”に向けた成長と発達を🌸<br>医療ケアに長けた専門スタッフがチームを組み、「お子さんとご家族の安心」をサポートします。</h2>
+
+<div class="hero">
+  <div class="slideshow">
+    <img src="images/facility1.jpg" alt="施設外観">
+    <img src="images/facility2.jpg" alt="プレイルーム">
+    <img src="images/facility3.jpg" alt="療育スペース">
+    <img src="images/facility4.jpg" alt="送迎車両">
   </div>
-  <footer><p>© 2025 ほっぷ＆すてっぷ All Rights Reserved.</p></footer>
-</body>
-</html>
+  <h2>どんな重い障がいや医療的ケアがあっても<br>子どもには子ども同士のつながりがある。</h2>
+  <p>お友達と心躍る“ほっぷ”な気持ちで、<br>次の“すてっぷ”に向けた成長と発達を🌸</p>
+🌸「お子さんが日中お友達と楽しく活動して笑顔になる」
+そして<br>「ご家族も安心して趣味や買い物の時間を過ごすことができる」<br>毎日の笑顔につながる支援を目指していきます。    <p class="subtitle"></p>
+  </div>
+
+  <!-- about -->
+  <section id="about">
+    <h2>重心児・医療ケア児専門　ほっぷ＆すてっぷとは？</h2>
+    <p></p>
+
+       私たちほっぷ＆すてっぷは、<strong>「重い障がいや医療ケアがあるお子さんとご家族の笑顔を増やすこと」</strong>を目標に、看護師・保健師・児童発達支援管理責任者・児童指導員・理学療法士など専門スタッフがチームを組んでサポートしていきます。
+  
+
+    </p><p></p><strong>🌈土浦協同病院・悠有会すずきクリニックと医療協力協定を締結</strong>しております。日々の体調管理や医療的ケアにおいて連絡調整をとり、地域と連携した総合サポートを行っていきます。</section><section id="about"><br></section><section id="about">&nbsp;
+<p><br>  <!-- usage flow -->
+  </p>
+    <h2>🌈ほっぷ＆すてっぷの特徴</h2><span style="background-color: initial; color: rgb(156, 123, 232); font-size: 1.4em; font-weight: 700;"></span><p></p></section><section id="features">
+
+    <p><strong>定員７名の超小規模で徹底したケア体制</strong><br>
+    少人数体制により、スタッフが一人ひとりと丁寧に向き合い、マンツーマンに近い療育支援を行っています。</p>
+
+    <p><strong>&nbsp;専門スタッフによる安心・安全な療育</strong><br>
+    看護師・保健師・児童発達支援管理責任者・児童指導員など、経験豊富なスタッフがチームを組み、医療的・発達的な両面から支援します。</p>
+
+    <p><strong>療法士による個別リハビリプログラム</strong><br>
+    理学療法士が作成した個別リハビリをもとに、日々の活動の中で無理なく取り組みます。お子さんの可能性を広げていきます。</p>
+
+    <p><strong>夏休みや長期休暇を活用した課外活動</strong><br>
+    ほっぷ＆すてっぷでは、長期休暇を利用してさまざまな外出活動を行っています。</p>
+
+    <ul>
+      <li>茨城県自然博物館</li>
+      <li>グリコピア・雪印メグミルクなどの工場見学</li>
+      <li>あみプレミアムアウトレット</li>
+      <li>イオン・ショッピングモールでのお買い物　など♪</li>
+    </ul>
+
+    <p><strong>&nbsp;福祉車両による安心の送迎</strong><br>
+    バギーや車椅子のまま乗車できる福祉車両を完備。<br>
+    ご希望に応じて、ご自宅までの個別送迎にも対応しています。</p>
+
+    <p><strong>&nbsp;地域と連携した総合サポート</strong><br>
+    発達のご相談など、児童発達支援管理責任者や保健師がサポートします。支援員や地域の保健センター等と連携をとりながら就学後も持続的に支援を行います。<br>
+    医療的ケアにおいては、<strong>土浦協同病院・悠有会すずきクリニック</strong>と連携をとり、看護師や療法士が日々の体調をサポートします。主治医の指示書と処方箋に基づき、経験豊富なスタッフが丁寧な医療的ケアを行います。</p>
+  </section>
+<br><p>
+<section id="schedule"></p><p><br></p>   <!-- schedule -->
+  
+      <h2>⏰１日のスケジュール</h2>
+
+    <h3>☆児童発達支援（就学前のお子様）</h3>
+    <table>
+      <tbody><tr><th>時間</th><th>内容</th></tr>
+      <tr><td>9:30</td><td>送迎</td></tr>
+      <tr><td>10:00</td><td>到着・水分補給・トイレ・健康チェック・出席確認</td></tr>
+      <tr><td>10:15</td><td>朝の会（ごあいさつ・お歌）／制作活動・レクリエーション</td></tr>
+      <tr><td>12:00</td><td>お昼（経管栄養やお弁当・歯磨き・片付け)</td></tr>
+      <tr><td>13:00</td><td>帰りの会</td></tr>
+      <tr><td>13:15</td><td>送迎バスまたは保護者様のお迎え</td></tr>
+    </tbody></table>
+    <p>※上記時間外のご利用に関してはご相談下さい</p>
+<br>
+    <h3>☆放課後等デイサービス（小学生〜高校生のお子様）</h3>
+    <table>
+      <tbody><tr><th>時間</th><th>内容</th></tr>
+      <tr><td>14:00</td><td>送迎（学校までお迎えに行きます）</td></tr>
+      <tr><td>15:00</td><td>水分補給・健康チェック・出席確認／制作活動・レクリエーション</td></tr>
+      <tr><td>16:15</td><td>帰りの会・連絡帳記入</td></tr>
+      <tr><td>16:30</td><td>送迎車または保護者様のお迎え</td></tr>
+    </tbody></table>
+    <p>※上記時間外のご利用に関してはご相談下さい</p>
+<br>
+    <h3>☆長期休暇日（夏休みなど）</h3>
+    <table>
+      <tbody><tr><th>時間</th><th>内容</th></tr>
+      <tr><td>9:30</td><td>送迎</td></tr>
+      <tr><td>10:15</td><td>到着・健康チェック</td></tr>
+      <tr><td>10:30</td><td>始まりの会</td></tr>
+      <tr><td>10:40</td><td>集団プログラム＆自由時間</td></tr>
+      <tr><td>12:00</td><td>お昼（経管栄養やお弁当・歯磨き・片付け）</td></tr>
+      <tr><td>13:00</td><td>集団レク or 個別プログラム</td></tr>
+      <tr><td>15:15</td><td>帰りの会・連絡帳記入</td></tr>
+      <tr><td>15:30</td><td>送迎車または保護者様のお迎え</td></tr>
+    </tbody></table>
+    <p>※上記時間外のご利用に関してはご相談下さい</p>
+<p><br></p>
+    <h3>🎨活動プログラム（Program）</h3>
+    <p><strong>全体プログラムの一例</strong></p>
+    <ul>
+      <li>課外活動（社会科工場見学やショッピングモールへお出かけ）</li>
+      <li>室内運動（ボール遊び・体操）</li>
+      <li>音楽（リトミック・合奏）</li>
+      <li>読み聞かせ（絵本）</li>
+      <li>リラックス（アロマなど）</li>
+      <li>お散歩（お天気の良い日は公園へ♪）</li>
+    </ul>
+<br>
+
+   <strong>個別プログラムの一例</strong><p></p>
+    <ul>
+      <li>音楽（楽器遊び）</li>
+      <li>運動（バランスボール・風船遊び）</li>
+      <li>手遊び歌・読み聞かせ</li>
+      <li>折り紙・制作</li>
+      <li>感覚遊び（スライム・絵の具）</li>
+      <li>リラックス（マッサージ）</li>
+    </ul>
+  </section>
+<p><br></p> <p><br></p>
+ <section id="medicalcare">
+<p><br></p>
+  <h2>🩺 医療的ケアについて</h2>
+  <p>
+    医療的ケアは、下記の内容において主治医の指示書を基に保護者からの依頼と同意に基づいて、看護師及び医療的ケアの研修を受けた介護士が実施いたします。
+  </p>
+
+  <ol>
+    <li>吸引（口腔内・鼻腔内・気管カニューレ内）</li>
+    <li>経管栄養（胃ろう・腸ろう・経鼻）</li>
+    <li>吸入</li>
+    <li>導尿・浣腸</li>
+    <li>発作時の対応（座薬使用時はご家族に連絡いたします）</li>
+  </ol>
+</section>
+
+
+<p><br></p>
+<section id="target"><p><br></p> 
+<p><br></p>     <h2>ご利用できるお子様</h2>
+
+    <p>
+      ほっぷ＆すてっぷでは、重症心身障がい児の就学中のお子様を対象にサービスを提供しています。ご利用にあたっては、事前に重心認定を受けていただく必要があります。
+      （重症心身障がい児以外でも、重心児スコアで超重症児・準超重症児に該当されるお子様も対象です。）
+      ※放課後等デイサービスの通所受給者証をお持ちの方も対象となります。
+    </p>
+
+    <h3>◎受給者証をすでにお持ちの場合</h3>
+    <p>
+      通所受給者証をお持ちの方は、証明書をご持参のうえご来所ください。ご契約後、利用日数に応じてすぐにご利用いただけます。
+      スタッフが丁寧にヒアリングを行い、お子様に合わせた支援計画を作成し、ご家庭と連携しながら最適な療育をご提案いたします。
+    </p>
+
+    <h3>◎受給者証をお持ちでない場合</h3>
+    <p>
+      放課後等デイサービスをご利用いただくには、「通所受給者証」が必要です。お住まいの市役所（福祉課）にて、放課後等デイサービス利用の申請手続きを行ってください。
+      支給が決定すると通所受給者証が発行され、その後すぐにサービスをご利用いただけます。
+    </p>
+
+    <p>ご不明な点や手続き方法については、スタッフがサポートいたしますのでお気軽にご相談ください。</p>
+  
+<p><br></p>
+  <section id="flow"><p><br></p>   <!-- usage flow -->
+
+    <h2>ご利用までの流れ</h2>
+
+    <ol class="flow-steps">
+      <li><strong>施設の見学・相談</strong><br>まずはお気軽にお問い合わせください。施設の雰囲気や支援内容を見学していただけます。</li>
+      <li><strong>障害福祉課での受給者証申請</strong><br>お住まいの市町村役所の障害福祉課にて、「放課後等デイサービス利用」の申請を行ってください。</li>
+      <li><strong>受給者証の交付</strong><br>支給決定後、通所受給者証が発行されます。</li>
+      <li><strong>面談・契約</strong><br>お子様の状態やご家庭の希望をお伺いし、支援計画を立てたうえでご契約を行います。</li>
+      <li><strong>ご利用開始</strong><br>ご契約後、安心して療育・活動をスタートできます。</li>
+    </ol>
+  </section>
+
+<p><br></p>
+<section id="staff"><p><br></p>   <!-- staff -->
+  
+    <h2>スタッフ紹介</h2>
+    <p>子どもたちの「らしさ」を尊重し、ご家族の「安心」を支えるために、専門スタッフがチームでサポートします。</p>
+
+    <div class="staff-card">
+ 
+      <h3>保健師・看護師　２名</h3><br>
+      <h3>児童発達支援管理責任者　１名</h3><br>
+      <h3>理学療法士　１名</h3><br>
+      <h3>児童指導員　１名</h3><br>
+      <h3>連携医療機関　土浦協同病院</h3><br>
+      <h3>連携医療機関　悠有会すずきクリニック</h3><br>
+    
+  </div></section>
+<p><br></p>
+  <section id="gallery"><p><br></p>   <!-- gallery -->
+
+    <h2>施設写真</h2>
+    <p>
+      床はフルフラットのバリアフリー設計で、経管栄養物品や医療用ベッド・吸引器等の医療ケア設備を常備しております。<br>
+      清潔で安心できる空間づくりを心がけています。いつでも見学お待ちしております。
+    </p>
+
+    <div class="gallery">
+      <img src="IMG_9328.jpeg" alt="施設外観">
+      <img src="IMG_9335.jpeg" alt="玄関・受付">
+      <img src="IMG_9344.jpeg" alt="プレイルーム全景">
+      <img src="IMG_9486.jpeg" alt="リハビリ・療育スペース">
+      <img src="IMG_9488.jpeg" alt="医療設備・ケアエリア">
+      <img src="IMG_9489.jpeg" alt="活動スペース">
+      <img src="IMG_9491.jpeg" alt="教材・遊具コーナー">
+      <img src="IMG_9492.jpeg" alt="ベッド・ケア用品">
+      <img src="IMG_9496.jpeg" alt="外観・送迎車両">
+    </div>
+  </section>
+
+<p><br></p>
+<p><br></p>   <!-- access -->
+  <section id="access">
+    <h2>アクセス</h2>
+    <p>
+      〒300-0341<br>
+      茨城県稲敷郡阿見町うずら野4-3-5 　ラ・プランシェ阿見110号室<br>
+      TEL：090-9357-4100<br>
+      最寄り駅：荒川沖駅から徒歩約10分
+    </p>
+    <iframe src="https://www.google.com/maps?q=茨城県稲敷郡阿見町うずら野4-3-5&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- contact -->
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>お問い合わせは以下のメールまたはお電話にて承っております。</p>
+    <p>📧 <a href="mailto:hop.and.step.ami@gmail.com">hop.and.step.ami@gmail.com</a></p>
+    <p>📞 090-9357-4100</p>
+    <p>✨️2025年12月1日オープン予定✨️</p>
+
+    <form class="contact" action="https://formspree.io/f/mnqklxyz" method="POST">
+      <input type="text" name="name" placeholder="お名前" required="">
+      <input type="email" name="email" placeholder="メールアドレス" required="">
+      <textarea name="message" rows="5" placeholder="お問い合わせ内容"></textarea>
+      <button type="submit">送信する</button>
+    </form>
+  </section>
+
+  <footer>
+    <img src="IMG_9489.jpeg" alt="ほっぷ＆すてっぷロゴ" style="width:100px;border-radius:10px;margin-bottom:8px;">
+    <div>© 2025 ほっぷ＆すてっぷ All Rights Reserved.</div>
+  </footer>
+
+
+
+</section>

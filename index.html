@@ -14,15 +14,9 @@
       line-height: 1.8;
     }
 
-   /* ヘッダー */
-header {
-  position: fixed; /* ← スクロールに反応させるため固定 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: top 0.4s ease; /* ← スッと消えるアニメーション */
-    background: linear-gradient(90deg, #f9c5d1, #f8e9a1, #a8e6cf, #ffd3b6);
+    /* ヘッダー */
+    header {
+      background: linear-gradient(90deg, #f9c5d1, #f8e9a1, #a8e6cf, #ffd3b6);
       background-size: 400% 400%;
       animation: gradient 10s ease infinite;
       padding: 30px 20px;
@@ -140,34 +134,32 @@ header {
     }
 
     /* ギャラリー */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center; /* 画像を中央寄せ */
-  padding: 20px 0;
-}
-
-.gallery img {
-  width: 100%;          /* グリッドに合わせる */
-  max-width: 300px;     /* 最大サイズ制限 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+  width: 80%;
+  max-width: 300px;
   height: auto;
   border-radius: 20px;
+  display: block;
+  margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+}    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-.gallery img:hover {
-  transform: scale(1.05);
-}
+    /* Google Map */
+    iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+    }
 
-/* Googleマップなどを広く見せたい場合 */
-.map-container iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-}
-      
     /* フッター */
     footer {
       background-color: #a8e6cf;
@@ -247,7 +239,7 @@ header {
     <p><strong>06. 地域と連携した総合サポート</strong><br>
     医療的ケアにおいて土浦協同病院・悠有会すずきクリニックと連携し、経験豊富なスタッフがサポートします。</p>
 
-           <section id="#services">
+ <section id="#services">
     <h3>⏰１日のスケジュール</h3>
 
     <h3>☆児童発達支援（就学前のお子様）</h3>
@@ -314,19 +306,18 @@ header {
     </ul>
   </section>
 
+    
   <section id="medicalcare">
     <h2>🩺 医療的ケアについて</h2>
-    <p>
+      <p>
       医療的ケアは、下記の内容において主治医の指示書を基に保護者からの依頼と同意に基づいて、看護師及び医療的ケアの研修を受けた介護士が実施いたします。
     </p>
 
-    <ol>
       <li>吸引（口腔内・鼻腔内・気管カニューレ内）</li>
       <li>経管栄養（胃ろう・腸ろう・経鼻）</li>
       <li>吸入</li>
       <li>導尿・浣腸</li>
-      <li>発作時の対応（座薬使用時はご家族に連絡いたします）</li>
-    </ol>
+      <li>発作時の対応（座薬使用時はご家族に連絡いたします）
   </section>
 
   <section id="target">

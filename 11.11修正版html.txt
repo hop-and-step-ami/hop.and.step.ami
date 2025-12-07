@@ -168,13 +168,18 @@
       border-top: 4px solid #ffd6a5;
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.4rem; }
-      .hero h2 { font-size: 1.2rem; }
-      section { margin: 20px 10px; }
-      table th, table td { font-size: 0.85rem; }
-    }
-  </style>
+
+@media (max-width: 600px) {
+  header {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  main {
+    margin-top: 60px;
+  }
+}
+</style>
 </head>
 <body>
 

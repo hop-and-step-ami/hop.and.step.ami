@@ -1,4 +1,218 @@
- <section id="about">
+
+ <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医療的ケア児・重症心身障がい児専門 ほっぷ＆すてっぷ
+児童発達支援 放課後デイサービス ｜hop.and.step.ami</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+<meta name="google-site-verification" content="8VdbwWkZMYCXLlSaB5Mlgo9cuZrCdhRb8Hhsuko_VV0" />    body {
+      font-family: "Noto Sans JP", sans-serif;
+      margin: 0;
+      background-color: #fff8fc;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    /* ヘッダー */
+    header {
+      background: linear-gradient(90deg, #f9c5d1, #f8e9a1, #a8e6cf, #ffd3b6);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      padding: 30px 20px;
+      text-align: center;
+      color: #2e4a3b;
+      border-bottom: 5px solid #ffd6a5;
+    }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    /* ナビゲーション */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2e4a3b;
+      background-color: #a8e6cf;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #ffd3b6;
+      color: #fff;
+    }
+
+    /* ヒーロー */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fdf2e9;
+    }
+    .hero img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    /* セクション共通 */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #2e4a3b;
+      border-left: 8px solid #f5b76e;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #2e4a3b;
+      margin-top: 25px;
+      font-size: 1.2rem;
+    }
+
+    ul, ol {
+      padding-left: 1.2em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    table th {
+      background-color: #fdf2e9;
+      color: #333;
+    }
+
+    /* スタッフリスト */
+    .staff-list {
+      list-style: none;
+      padding: 0;
+    }
+    .staff-list li {
+      background-color: #a8e6cf;
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      color: #2e4a3b;
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    /* ギャラリー */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Google Map */
+    iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+    }
+
+    /* フッター */
+    footer {
+      background-color: #a8e6cf;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #2e4a3b;
+      margin-top: 50px;
+      border-top: 4px solid #ffd6a5;
+    }
+
+
+@media (max-width: 600px) {
+  header {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  main {
+    margin-top: 60px;
+  }
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>医療的ケア児・重症心身障がい児専門<br>児童発達支援・放課後デイサービス　ほっぷ＆すてっぷ</h1>
+  </header>
+
+  <nav>
+    <a href="#about">🌈ほっぷ＆すてっぷとは？</a>
+    <a href="#services">１日の流れ</a>
+<a href="#medicalcare">医療的ケア</a>
+    <a href="#target">対象のお子様</a>
+    <a href="#flow">利用お手続き</a>
+    <a href="#team">スタッフ紹介</a>
+    <a href="#gallery">施設写真</a>
+    <a href="#access">アクセス</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <div class="hero">
+    <img src="https://placehold.jp/800x400.png?text=笑顔の子どもたち（仮画像）" alt="笑顔の子どもたち">
+    <h2>
+      NICUを退院されたお子様や、医療的ケアが必要なお子様に、入退院後も切れ目のない医療ケアを届けたい。
+<br>それが私達の願いです。<p>
+      お友達と心躍る“ほっぷ”な気持ちで、次の“すてっぷ”に向けた成長と発達を🌸<br>
+      医療ケアに長けた専門スタッフがチームを組み、「お子さんとご家族の安心」をサポートします。
+    </h2>
+</div>
+
+
+<section id="about">
     <h2>重心児・医療ケア児専門　ほっぷ＆すてっぷとは？</h2>
 <p>
 ほっぷ＆すてっぷは、《超小規模（定員７名）》《医療的ケア児》《重症心身障がい児》に特化した放課後等デイサービスです。</p>
